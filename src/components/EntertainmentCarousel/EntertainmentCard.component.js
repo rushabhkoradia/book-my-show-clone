@@ -5,7 +5,7 @@ const EntertainmentCard = (props) => {
     return (
         <>
            <div className="w-full h-30 px-2">
-                <img src={ props.src } alt="Entertainment Image" className="w-full h-full rounded-xl" />
+                <img src={ props.src } alt="Entertainment Image" className="w-full h-full rounded-lg" />
             </div> 
         </>
     );
@@ -33,7 +33,7 @@ const EntertainmentCardSlider = () => {
         slidesToShow: 5,
         slidesToScroll: 5,
         InitialSlide: 0
-    }
+    };
 
     return (
         <>
