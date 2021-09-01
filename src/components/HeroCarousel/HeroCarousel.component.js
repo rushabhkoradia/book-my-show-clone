@@ -1,9 +1,8 @@
 import React from 'react';
 import HeroSlider from 'react-slick';
 
-// import CSS files
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+// components
+import { NextArrow, PrevArrow } from './Arrows.component';
 
 const HeroCarousel = () => {
     const settingsLg = {
@@ -15,7 +14,9 @@ const HeroCarousel = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
     };
     
     const settings = {
@@ -24,7 +25,9 @@ const HeroCarousel = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
     };
     
     const images = [
@@ -50,7 +53,7 @@ const HeroCarousel = () => {
            </div>
 
             <div className="hidden lg:block">
-                <HeroSlider {...settingsLg}>
+                <HeroSlider style={{ padding: 0, width: '100%', maxHeight: '600px' }} {...settingsLg}>
                 {
                     images.map((image) => (
                         <div className="w-full h-96 px-2 py-3">
