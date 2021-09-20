@@ -15,10 +15,10 @@ const ProfileSlider = (props) => {
 					{props.subtitle}
 				</p>
 			</div>
-			<Slider {...ProfileSettings}>
-				{props.images.map((image)=> (
-					<Poster {...image} isDark={props.isDark}/>
-				))}
+			<Slider { ...ProfileSettings }>
+				{ props.images.map((image)=> (
+					<Poster { ...image } isDark={ props.isDark }/>
+				)) }
 			</Slider>
 		</>
 	);
